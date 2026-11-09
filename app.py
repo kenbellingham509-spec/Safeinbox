@@ -458,5 +458,6 @@ def too_big(_e):
     return render_template("error.html", code=413, msg="That email is too large to scan."), 413
 
 
-if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=int(os.environ.get("PORT", 5000)), debug=os.environ.get("FLASK_DEBUG") == "1")
+if _name_ == "_main_":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
